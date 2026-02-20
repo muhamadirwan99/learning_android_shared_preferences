@@ -81,7 +81,7 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
     private fun showPreferenceInForm() {
         binding.edtName.setText(userModel.name)
         binding.edtEmail.setText(userModel.email)
-        binding.edtAge.setText(userModel.age)
+        binding.edtAge.setText(userModel.age.toString())
         binding.edtPhone.setText(userModel.phoneNumber)
 
         if (userModel.isLove) {
@@ -93,10 +93,10 @@ class FormUserPreferenceActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.btn_save) {
-            val name = binding.edtName.toString().trim()
-            val email = binding.edtEmail.toString().trim()
-            val age = binding.edtAge.toString().trim()
-            val phoneNo = binding.edtPhone.toString().trim()
+            val name = binding.edtName.text.toString().trim()
+            val email = binding.edtEmail.text.toString().trim()
+            val age = binding.edtAge.text.toString().trim()
+            val phoneNo = binding.edtPhone.text.toString().trim()
             val isLoveMU = binding.rgLoveMu.checkedRadioButtonId == R.id.rb_yes
 
             if (name.isEmpty()) {

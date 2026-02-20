@@ -96,12 +96,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 isPreferenceEmpty -> {
                     intent.putExtra(
                         FormUserPreferenceActivity.EXTRA_TYPE_FORM,
-                        FormUserPreferenceActivity.TYPE_ADD,
+                        FormUserPreferenceActivity.TYPE_ADD
                     )
-
                     intent.putExtra("USER", userModel)
                 }
-
                 else -> {
                     intent.putExtra(
                         FormUserPreferenceActivity.EXTRA_TYPE_FORM,
